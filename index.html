@@ -13,61 +13,43 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Фон страницы - замените на свою картинку */
             background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+            /* Или используйте изображение: */
+            /* background-image: url('background.jpg'); */
+            /* background-size: cover; */
+            /* background-attachment: fixed; */
             min-height: 100vh;
             color: #ffffff;
-            overflow-x: hidden;
         }
 
         /* Шапка с изображением */
-        .hero {
-            position: relative;
+        .header-banner {
             width: 100%;
-            height: 100vh;
-            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(138, 43, 226, 0.1) 100%),
-                        url('https://media.discordapp.net/attachments/1190194781838655539/1506115992600707144/image.png?ex=6a0e68d2&is=6a0d1752&hm=46f3f436659ac7d9788afe99a32ce2cd6f09259fd6c320c276234f075ae2ad83&=&format=webp&quality=lossless&width=1403&height=816');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .header-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.3),
+                        0 0 0 1px rgba(255, 255, 255, 0.1);
+            display: block;
+        }
+
+        /* Основной контент */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
             text-align: center;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(3px);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            padding: 2rem;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
 
         .logo {
-            font-size: 6rem;
+            font-size: 5rem;
             font-weight: 900;
             margin-bottom: 1rem;
             background: linear-gradient(135deg, #00ff88 0%, #8a2be2 100%);
@@ -79,7 +61,7 @@
         }
 
         .tagline {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: #b8b8d1;
             margin-bottom: 3rem;
             font-weight: 300;
@@ -91,6 +73,7 @@
             gap: 2rem;
             justify-content: center;
             flex-wrap: wrap;
+            margin-top: 2rem;
         }
 
         .btn {
@@ -156,39 +139,14 @@
             height: 24px;
         }
 
-        /* Декоративные элементы */
-        .glow {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.3;
-            z-index: 1;
-        }
-
-        .glow-1 {
-            width: 400px;
-            height: 400px;
-            background: #00ff88;
-            top: -100px;
-            left: -100px;
-        }
-
-        .glow-2 {
-            width: 300px;
-            height: 300px;
-            background: #8a2be2;
-            bottom: -50px;
-            right: -50px;
-        }
-
         /* Адаптивность */
         @media (max-width: 768px) {
             .logo {
-                font-size: 4rem;
+                font-size: 3.5rem;
             }
             
             .tagline {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
             
             .buttons-container {
@@ -201,48 +159,70 @@
                 max-width: 300px;
                 justify-content: center;
             }
-        }
-
-        /* Анимация пульсации для кнопок */
-        @keyframes pulse {
-            0%, 100% {
-                box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
-            }
-            50% {
-                box-shadow: 0 0 40px rgba(0, 255, 136, 0.6);
+            
+            .header-banner {
+                margin: 20px auto;
             }
         }
 
-        .btn-github {
-            animation: pulse 3s infinite;
+        /* Декоративные элементы на фоне */
+        .glow {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.2;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .glow-1 {
+            width: 500px;
+            height: 500px;
+            background: #00ff88;
+            top: -100px;
+            left: -100px;
+        }
+
+        .glow-2 {
+            width: 400px;
+            height: 400px;
+            background: #8a2be2;
+            bottom: -100px;
+            right: -100px;
         }
     </style>
 </head>
 <body>
-    <section class="hero">
-        <div class="glow glow-1"></div>
-        <div class="glow glow-2"></div>
+    <!-- Декоративные элементы -->
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <!-- Шапка с изображением -->
+    <div class="header-banner">
+        <!-- Замените 'your-image.jpg' на имя вашего файла -->
+        <img src="https://media.discordapp.net/attachments/1190194781838655539/1506732831915901059/WeeklySplash.png?ex=6a0f55cc&is=6a0e044c&hm=e3c06d983e34dc823954f24143f9235a0d5051000a73fe12fcb59f0f6f7234f2&=&format=webp&quality=lossless&width=1787&height=300" alt="Weekly Player" class="header-image">
+    </div>
+
+    <!-- Основной контент -->
+    <div class="main-content">
+        <h1 class="logo">Weekly</h1>
+        <p class="tagline">Современный музыкальный плеер с уникальным дизайном</p>
         
-        <div class="hero-content">
-            <h1 class="logo">Weekly</h1>
-            <p class="tagline">Современный музыкальный плеер с уникальным дизайном</p>
+        <div class="buttons-container">
+            <a href="https://github.com/Pickramag/Weekly-Player" class="btn btn-github" target="_blank">
+                <svg fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+                Страница GitHub
+            </a>
             
-            <div class="buttons-container">
-                <a href="https://github.com/Pickramag/Weekly-Player" class="btn btn-github" target="_blank">
-                    <svg fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                    Страница GitHub
-                </a>
-                
-                <a href="https://github.com/Pickramag/Weekly-Player/releases" class="btn btn-download" target="_blank">
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                    </svg>
-                    Скачать Release
-                </a>
-            </div>
+            <a href="https://github.com/Pickramag/Weekly-Player/releases" class="btn btn-download" target="_blank">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                Скачать Release
+            </a>
         </div>
-    </section>
+    </div>
 </body>
 </html>
