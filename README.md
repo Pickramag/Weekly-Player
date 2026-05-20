@@ -7,4 +7,4 @@ To make this audio player i use tauri + react.
 This audio player was made for my friends and me.
 
 To download last version click a button below:
-([DOWNLOAD]https://github.com/Pickramag/Weekly-Player/releases)
+([DOWNLOAD](https://github.com/Pickramag/Weekly-Player/releases))
