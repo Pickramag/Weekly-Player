@@ -16,11 +16,21 @@
             /* Фон страницы - замените на свою картинку */
             /*background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);*/
             /* Или используйте изображение: */
-            background-image: url('https://media.discordapp.net/attachments/1190194781838655539/1506115992600707144/image.png?ex=6a0e68d2&is=6a0d1752&hm=46f3f436659ac7d9788afe99a32ce2cd6f09259fd6c320c276234f075ae2ad83&=&format=webp&quality=lossless&width=1403&height=816');
+            background-image: url('https://media.discordapp.net/attachments/1190194781838655539/1506784472203399240/image.png?ex=6a0f85e4&is=6a0e3464&hm=922a36cbd6a1ced37a261902766ba81b053835cd4c30d1f97116d23236921750&=&format=webp&quality=lossless&width=1430&height=816');
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(138, 43, 226, 0.1) 100%),
+                        url('your-image.jpg');
             background-size: cover;
+            background-position: center;
             background-attachment: fixed;
-            min-height: 100vh;
-            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
         }
 
         /* Шапка с изображением */
