@@ -16,37 +16,30 @@
             min-height: 100vh;
             color: #ffffff;
             margin: 0;
-            /* Убираем overflow, чтобы не появлялись полосы прокрутки от размытия */
             overflow-x: hidden; 
-            position: relative; /* Нужно для позиционирования псевдоэлемента */
+            position: relative;
         }
 
-        /* Создаем специальный слой для фона */
         body::before {
             content: '';
-            position: fixed; /* Фон не двигается при скролле */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             
-            /* СЮДА ВСТАВЬ ПУТЬ К ТВОЕЙ КАРТИНКЕ ДЛЯ ФОНА */
             background-image: url('https://media.discordapp.net/attachments/1190194781838655539/1506784472203399240/image.png?ex=6a0f85e4&is=6a0e3464&hm=922a36cbd6a1ced37a261902766ba81b053835cd4c30d1f97116d23236921750&=&format=webp&quality=lossless&width=1430&height=816'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             
-            /* САМО РАЗМЫТИЕ */
-            filter: blur(7px); /* Меняй силу размытия (5px - 20px) */
+            filter: blur(7px);
             
-            /* Исправление белых краев по бокам из-за размытия */
             transform: scale(1.1); 
             
-            /* Помещаем на задний план */
             z-index: -1; 
         }
 
-        /* Шапка с изображением */
         .header-banner {
             width: 100%;
             max-width: 1200px;
@@ -63,7 +56,6 @@
             display: block;
         }
 
-        /* Основной контент */
         .main-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -162,7 +154,6 @@
             height: 24px;
         }
 
-        /* Адаптивность */
         @media (max-width: 768px) {
             .logo {
                 font-size: 3.5rem;
@@ -188,7 +179,6 @@
             }
         }
 
-        /* Декоративные элементы на фоне */
         .glow {
             position: fixed;
             border-radius: 50%;
@@ -216,17 +206,13 @@
     </style>
 </head>
 <body>
-    <!-- Декоративные элементы -->
     <div class="glow glow-1"></div>
     <div class="glow glow-2"></div>
 
-    <!-- Шапка с изображением -->
     <div class="header-banner">
-        <!-- Замените 'your-image.jpg' на имя вашего файла -->
         <img src="https://media.discordapp.net/attachments/1190194781838655539/1506732831915901059/WeeklySplash.png?ex=6a0f55cc&is=6a0e044c&hm=e3c06d983e34dc823954f24143f9235a0d5051000a73fe12fcb59f0f6f7234f2&=&format=webp&quality=lossless&width=1787&height=300" alt="Weekly Player" class="header-image">
     </div>
 
-    <!-- Основной контент -->
     <div class="main-content">
         <p class="tagline">Современный музыкальный плеер с импортом плейлистов с SoundCloud. Создан для себя и своих друзьяшек ❤</p>
         
@@ -238,7 +224,7 @@
                 Страница GitHub
             </a>
             
-            <a href="https://github.com/Pickramag/Weekly-Player/releases" class="btn btn-download" target="_blank">
+            <a href="https://github.com/Pickramag/Weekly-Player/releases/latest" class="btn btn-download" target="_blank">
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
                 </svg>
