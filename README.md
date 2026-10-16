@@ -32,7 +32,8 @@
   <table>
     <tr>
       <th align="center">Главная</th>
-      <th align="center">Плейлисты</th>
+      <th align="center">Страница трека</th>
+      <th align="center">Текст песни</th>
       <th align="center">Настройки</th>
     </tr>
     <tr>
