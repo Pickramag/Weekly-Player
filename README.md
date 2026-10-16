@@ -37,13 +37,16 @@
     </tr>
     <tr>
       <td align="center">
-        <img src="assets/screenshots/home.png" alt="Главная" width="100%" />
+        <img src="assets/screenshots/WeeklyMainPage.png" alt="Главная" width="100%" />
       </td>
       <td align="center">
-        <img src="assets/screenshots/playlists.png" alt="Плейлисты" width="100%" />
+        <img src="assets/screenshots/WeeklyTrackPage.png" alt="Страница трека" width="100%" />
       </td>
       <td align="center">
-        <img src="assets/screenshots/settings.png" alt="Настройки" width="100%" />
+        <img src="assets/screenshots/WeeklyLyricsPage.png" alt="Текст песни" width="100%" />
+      </td>
+      <td align="center">
+        <img src="assets/screenshots/WeeklySettingsPage.png" alt="Настройки" width="100%" />
       </td>
     </tr>
   </table>
